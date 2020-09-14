@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="discovery" />
         <module name="persistance" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="discovery" target="11" />
       <module name="persistance" target="11" />
       <module name="pilotpay-reactor" target="1.5" />
       <module name="reverse-proxy" target="11" />
@@ -17,6 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="discovery" options="-parameters" />
       <module name="persistance" options="-parameters" />
       <module name="reverse-proxy" options="-parameters" />
     </option>

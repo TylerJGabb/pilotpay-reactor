@@ -1,0 +1,35 @@
+version: '2'
+services:
+  pilotpaydb:
+    ports:
+    - 5432:5432
+#   an image i made, that has postgres with a pre-made db pilotpaydb...
+    image: pilotpaydb:1
+
+  discovery:
+    image: gabb-discovery:1
+    ports:
+    - 8761:8761
+
+  pilot-service-1:
+    image: gabb-persistance:1
+    depends_on:
+      - discovery
+      - pilotpaydb
+    environment:
+      - DATASOURCE_URL=pilotpaydb
+      - EUREKA_SERVER=http://discovery:8761/eureka
+    ports:
+    - 8081:8081
+
+  pilot-service-2:
+    image: gabb-persistance:1
+    depends_on:
+      - discovery
+      - pilotpaydb
+    environment:
+      - PORT=8082
+      - DATASOURCE_URL=pilotpaydb
+      - EUREKA_SERVER=http://discovery:8761/eureka
+    ports:
+      - 8082:8082

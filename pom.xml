@@ -12,5 +12,6 @@
 
         <modules>
                 <module>persistance</module>
+                <module>discovery</module>
         </modules>
 </project>
