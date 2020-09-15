@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="discovery" />
         <module name="persistance" />
+        <module name="reverseproxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +17,7 @@
       <module name="persistance" target="11" />
       <module name="pilotpay-reactor" target="1.5" />
       <module name="reverse-proxy" target="11" />
+      <module name="reverseproxy" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,6 +25,7 @@
       <module name="discovery" options="-parameters" />
       <module name="persistance" options="-parameters" />
       <module name="reverse-proxy" options="-parameters" />
+      <module name="reverseproxy" options="-parameters" />
     </option>
   </component>
 </project>

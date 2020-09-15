@@ -13,5 +13,6 @@
         <modules>
                 <module>persistance</module>
                 <module>discovery</module>
+                <module>reverseproxy</module>
         </modules>
 </project>

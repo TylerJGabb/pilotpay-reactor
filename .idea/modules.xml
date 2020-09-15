@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/persistance/persistance.iml" filepath="$PROJECT_DIR$/persistance/persistance.iml" />
       <module fileurl="file://$PROJECT_DIR$/pilotpay-reactor.iml" filepath="$PROJECT_DIR$/pilotpay-reactor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reverseproxy/reverseproxy.iml" filepath="$PROJECT_DIR$/reverseproxy/reverseproxy.iml" />
     </modules>
   </component>
 </project>
