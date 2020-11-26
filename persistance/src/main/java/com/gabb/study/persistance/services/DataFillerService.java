@@ -2,19 +2,21 @@ package com.gabb.study.persistance.services;
 
 import com.gabb.study.persistance.dao.PilotDao;
 import com.gabb.study.persistance.entities.Pilot;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 //turned off, replaced with db.migration using flywaydb
 //@Service
+@Data
+@RequiredArgsConstructor
+@Builder
 public class DataFillerService {
 
-    private PilotDao pilotDao;
-
-    public DataFillerService(PilotDao pilotDao) {
-        this.pilotDao = pilotDao;
-    }
+    private final PilotDao pilotDao;
 
     @PostConstruct
     @Transactional

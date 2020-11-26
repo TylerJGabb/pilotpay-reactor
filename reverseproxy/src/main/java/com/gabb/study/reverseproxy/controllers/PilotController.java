@@ -23,7 +23,6 @@ public class PilotController {
 
     @GetMapping("**")
     public ResponseEntity<String> getPilots(HttpServletRequest request) {
-        System.out.println(request.getRequestURI());
         return restTemplate.exchange(
                 "http://pilot-service" + request.getRequestURI(), HttpMethod.GET, null, String.class);
     }
